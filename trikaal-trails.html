@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trikaal Trails &ndash; Spiritual &amp; Pilgrim Travel Services</title>
+<!-- Future roadmap: this site will be deployed independently at trikaaltrails.sushrushamargam.org -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="lang-bar">
+  <div class="container">
+    <button data-lang="en" class="active">English</button>
+    <button data-lang="te">తెలుగు</button>
+    <button data-lang="hi">हिंदी</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <div class="logo">
+      <img src="assets/trikaal-trails-logo.jpeg" alt="Trikaal Trails logo">
+      <span class="logo-copy">Trikaal Trails
+      <span class="sub">A Sushrusha Margam Initiative</span>
+      </span>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li class="has-dropdown"><a href="index.html#sushrusha" data-i18n="nav.sushrusha">Sushrusha Margam</a><ul class="dropdown-menu">
+          <li><a href="about.html">About Us</a></li><li><a href="index.html#sena">Sushrusha Sena</a></li><li><a href="prakruthi-sushrusha.html">Environmental Seva</a></li><li><a href="index.html#spiritual">Spiritual Activities</a></li><li><a href="index.html#events">Events</a></li><li><a href="index.html#join">Join Sushrusha</a></li>
+        </ul></li>
+        <li class="has-dropdown">
+          <a href="#tabs" data-i18n="nav.trikaal">Trikaal Trails</a>
+          <ul class="dropdown-menu">
+            <li><a href="#journeys" data-i18n="nav.trikaalDarshan">Trikaal Darshan</a></li>
+            <li><a href="#packages" data-i18n="nav.spiritualJourney">Spiritual Journey</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 data-i18n="tt.hero.title">Trikaal Trails</h1>
+    <p class="tagline" data-i18n="tt.hero.sub">Sacred Journeys. Comfortable Travel. Memorable Pilgrimages.</p>
+    <p class="tagline" data-i18n="tt.hero.tag">One Destination for Darshan, Devotion, and Divine Journeys</p>
+    <div class="badge" data-i18n="tt.hero.line">Darshan Assistance | Pooja Bookings | Pilgrimage Travel | Temple Guidance</div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p style="max-width:800px;margin:0 auto 10px;text-align:center;">
+      At Trikaal Trails, we are committed to making every spiritual journey peaceful, well-organized, and
+      memorable. Whether you are visiting a temple individually, with your family, or as part of a group,
+      we provide reliable assistance for darshan, pooja, pilgrimage travel and complete travel planning.
+    </p>
+    <p style="max-width:800px;margin:0 auto 30px;text-align:center;">
+      Our goal is to help devotees focus on their devotion while we assist with the planning and
+      coordination of their pilgrimage. Walk the sacred path with us &mdash; let faith guide your journey
+      and let the divine lead you within.
+    </p>
+
+    <div class="tabs-nav" id="tabs">
+      <button data-tab="tab-journey" class="active" data-i18n="tt.tabs.journey">Journey</button>
+      <button data-tab="tab-spiritual" data-i18n="tt.tabs.spiritual">Spiritual</button>
+      <button data-tab="tab-alone" data-i18n="tt.tabs.alone">Alone</button>
+    </div>
+
+    <div id="tab-journey" class="tab-panel active">
+      <p data-i18n="tt.tabs.journeyText">Every destination begins with a JOURNEY. We&rsquo;re with you every step of the way.</p>
+      <p class="callout" data-i18n="tt.tabs.journeyCallout">WE WALK WITH YOU</p>
+    </div>
+    <div id="tab-spiritual" class="tab-panel">
+      <p data-i18n="tt.tabs.spiritualText">We may not know where the PATH WILL LEAD but faith gives us the strength to continue the JOURNEY.</p>
+      <p class="callout" data-i18n="tt.tabs.spiritualCallout">FAITH GUIDES YOU</p>
+    </div>
+    <div id="tab-alone" class="tab-panel">
+      <p data-i18n="tt.tabs.aloneText">At a certain point, no one can walk the path for you. The JOURNEY towards the DIVINE or SPIRITUAL is ultimately your own.</p>
+      <p class="callout" data-i18n="tt.tabs.aloneCallout">YOU WALK WITHIN</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="tt.services.title">Our Services</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3 data-i18n="tt.services.darshan.title">Darshan &amp; Pooja Assistance</h3>
+        <p data-i18n="tt.services.darshan.desc">We provide guidance and assistance for temple darshan, pooja &amp; seva according to the traditions and procedures of the respective temples.</p>
+        <ul>
+          <li>Online Darshan Ticket Booking Assistance</li>
+          <li>Pilgrimage Planning &amp; Temple Guidance</li>
+          <li>Temple Seva &amp; Devotee Support</li>
+          <li>Sankalpam &amp; Homam Arrangements</li>
+        </ul>
+        <a href="#contact" class="btn" data-i18n="tt.services.needAssistance">Need Assistance</a>
+      </div>
+      <div class="card">
+        <h3 data-i18n="tt.services.spiritualJourney.title">Spiritual Journey</h3>
+        <p data-i18n="tt.services.spiritualJourney.desc">Pilgrimage travel services with comfort and confidence through our pilgrimage travel assistance.</p>
+        <ul>
+          <li>Individual &amp; Group Pilgrimages</li>
+          <li>Family &amp; Customized Tour Packages</li>
+          <li>Multi-Temple Pilgrimage Planning</li>
+          <li>Flight &amp; Train Booking Assistance</li>
+          <li>Bus &amp; Hotel Booking Assistance</li>
+          <li>Temple Route Planning &amp; Local Guidance</li>
+        </ul>
+        <a href="#contact" class="btn" data-i18n="tt.services.needAssistance">Need Assistance</a>
+      </div>
+      <div class="card">
+        <h3 data-i18n="tt.services.destinations.title">Pilgrimage Destinations</h3>
+        <p>We assist devotees with thoughtful planning for sacred destinations, temple routes and meaningful spiritual journeys across India.</p>
+        <ul>
+          <li>Temple information and route planning</li>
+          <li>Individual, family and group pilgrimage guidance</li>
+          <li>Darshan, pooja and travel coordination</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Upcoming Spiritual Packages ===== -->
+<section id="packages">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="tt.packages.title">Upcoming Spiritual Packages</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="grid">
+
+      <div class="card package-card">
+        <span class="status">Upcoming</span>
+        <h3>Trikaal Tirumala &ndash; Kanchi Yatra Spiritual Journey</h3>
+        <p class="meta">Sri Kanipaka, Arunachal Giri Pradakshana, Kanchi, Sri Kalahasthi, Sri Venkateswara Temple</p>
+        <p class="meta">Route: Hyderabad &ndash; Kanipakam &ndash; Kanchipuram &ndash; Arunachalam &ndash; Tirupati &ndash; Srikalahasti &ndash; Hyderabad</p>
+        <p class="meta">Duration: 5 Days | A/C Bus | 4 Days / 16 Temples</p>
+        <p class="price">14,999/- Per Person</p>
+        <a href="#contact" class="btn outline">Enquire Now</a>
+      </div>
+
+      <div class="card package-card">
+        <span class="status">Upcoming</span>
+        <h3>Trikaal Tirumala &ndash; Mysore Yatra Spiritual Journey</h3>
+        <p class="meta">Tirumala Venkateswara, Padmavathi, Kapila Theertham, Gavi Gangadhareshwara, Chamundeshwari, Sriranganatha, Cheluvanarayana Swamy, Ranganathaswamy, Chennakeshava, Hampi</p>
+        <p class="meta">Route: Hyderabad &ndash; Tirupati &ndash; Bangalore &ndash; Mysore &ndash; Srirangapatna &ndash; Melukote &ndash; Hampi &ndash; Hyderabad</p>
+        <p class="meta">Duration: 6 Days | 6 Days / 16 Temples</p>
+        <p class="price">18,999/- Per Person</p>
+        <a href="#contact" class="btn outline">Enquire Now</a>
+      </div>
+
+      <div class="card package-card">
+        <span class="status">Upcoming</span>
+        <h3>Trikaal Kamakhya &ndash; Shakthi Yatra</h3>
+        <p class="meta">Pithapuram, Annavaram, Simhachalam, Srikoormam, Puri Jagannath, Sakshi Gopal, Konark, Bhuvaneswar, Kolkata, Kamakhya, Vaidhyanath, Girijadevi</p>
+        <p class="meta">Duration: 9 Days | 9 Days / 22 Temples</p>
+        <p class="price">29,999/- Per Person</p>
+        <a href="#contact" class="btn outline">Enquire Now</a>
+      </div>
+
+      <div class="card package-card">
+        <span class="status">Upcoming</span>
+        <h3>Char Dham Yatra Spiritual Journey</h3>
+        <p class="meta">3 Tier AC Train</p>
+        <p class="meta">Duration: 15 Days, 13 Nights | 15 Days / 4 Temples</p>
+        <p class="price">38,000/- Per Person</p>
+        <a href="#contact" class="btn outline">Enquire Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Upcoming / Completed Journeys ===== -->
+<section class="alt" id="journeys">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="tt.journeys.title">Upcoming Journeys / Completed Journeys</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="journey-filter">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="upcoming" data-i18n="tt.journeys.upcoming">Upcoming Journeys</button>
+      <button data-filter="completed" data-i18n="tt.journeys.completed">Completed Journeys</button>
+    </div>
+
+    <div class="scroll-x">
+      <table class="journeys-table">
+        <thead>
+          <tr>
+            <th>From Date</th>
+            <th>To Date</th>
+            <th>Location Details</th>
+            <th>Price</th>
+            <th data-i18n="tt.journeys.viewDetails">Journey Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-status="completed">
+            <td>29/07/2026</td>
+            <td>05/08/2026</td>
+            <td>Rameswaram &ndash; Kumbakonam &ndash; Kanchipuram &ndash; Tirupati</td>
+            <td>19,999/- PP</td>
+            <td><a href="#journey-rameswaram">View &ndash; <span class="status-pill completed">Completed</span></a></td>
+          </tr>
+          <tr data-status="upcoming">
+            <td>14/08/2026</td>
+            <td>18/08/2026</td>
+            <td>Thiruvannamalai &ndash; Kanchi &ndash; Tirupati</td>
+            <td>14,999/- PP</td>
+            <td><a href="#journey-thiruvannamalai">View &ndash; <span class="status-pill upcoming">Upcoming</span></a></td>
+          </tr>
+          <tr data-status="upcoming">
+            <td>22/08/2026</td>
+            <td>30/08/2026</td>
+            <td>Puri &ndash; Tarapith &ndash; Kamakhya</td>
+            <td>29,999/- PP</td>
+            <td><a href="#journey-kamakhya">View &ndash; <span class="status-pill upcoming">Upcoming</span></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="scroll-hint">&larr; Scroll left / right to view full journey table &rarr;</p>
+  </div>
+</section>
+
+<!-- ===== Journey Detail: Rameswaram (Completed) ===== -->
+<section id="journey-rameswaram">
+  <div class="container">
+    <div class="journey-detail">
+      <span class="status-pill completed">Completed</span>
+      <h3>Rameswaram &ndash; Kumbakonam &ndash; Kanchipuram &ndash; Tirupati Yatra</h3>
+      <p><strong>29 July 2026 &ndash; 05 August 2026</strong> &middot; 8 Days / 7 Nights &middot; &#8377;19,999 per person</p>
+      <p>A spiritually enriching pilgrimage from Hyderabad through the sacred temple towns of Kumbakonam,
+      Rameswaram, Kanchipuram and Tirupati, seeking the blessings of Lord Shiva, Goddess Shakti and Lord Venkateswara.</p>
+
+      <div class="day-block"><h4>Day 1 &ndash; 29 July | Hyderabad &rarr; Kumbakonam</h4>
+        <ul><li>Departure from Hyderabad, journey towards Kumbakonam.</li><li>Arrival and accommodation check-in; evening temple visit, subject to time availability.</li><li>Overnight stay at Kumbakonam.</li></ul></div>
+      <div class="day-block"><h4>Day 2 &ndash; 30 July | Kumbakonam Temple Darshan</h4>
+        <ul><li>Morning temple visits in and around Kumbakonam; darshan at important Shiva and Devi temples.</li><li>Devotional activities and personal prayer. Overnight stay at Kumbakonam.</li></ul></div>
+      <div class="day-block"><h4>Day 3 &ndash; 31 July | Kumbakonam &rarr; Rameswaram</h4>
+        <ul><li>Morning departure towards Rameswaram; arrival and hotel check-in.</li><li>Evening visit to Sri Ramanathaswamy Temple, subject to temple timings. Overnight at Rameswaram.</li></ul></div>
+      <div class="day-block"><h4>Day 4 &ndash; 01 August | Rameswaram &ndash; Sacred Temple Darshan</h4>
+        <ul><li>Early morning Sri Ramanathaswamy Darshan; traditional temple rituals subject to availability.</li><li>Visit Agni Theertham and other pilgrimage locations. Overnight at Rameswaram.</li></ul></div>
+      <div class="day-block"><h4>Day 5 &ndash; 02 August | Rameswaram &rarr; Kanchipuram</h4>
+        <ul><li>Morning departure towards Kanchipuram, the historic temple city.</li><li>Evening visit to Sri Kamakshi Amman Temple, subject to timings. Overnight at Kanchipuram.</li></ul></div>
+      <div class="day-block"><h4>Day 6 &ndash; 03 August | Kanchipuram &rarr; Tirupati</h4>
+        <ul><li>Morning temple darshan in Kanchipuram; departure towards Tirupati.</li><li>Evening local temple visit / devotional activities. Overnight at Tirupati.</li></ul></div>
+      <div class="day-block"><h4>Day 7 &ndash; 04 August | Tirupati &ndash; Tirumala Darshan</h4>
+        <ul><li>Early morning journey to Tirumala; darshan of Sri Venkateswara Swamy.</li><li>Return to Tirupati; evening rest and personal prayer.</li></ul></div>
+      <div class="day-block"><h4>Day 8 &ndash; 05 August | Tirupati &rarr; Hyderabad</h4>
+        <ul><li>Morning local visit / temple darshan, subject to available time.</li><li>Return journey to Hyderabad; yatra concludes with the blessings of Lord Venkateswara.</li></ul></div>
+
+      <div class="highlights">
+        <h4>Yatra Highlights</h4>
+        <ul>
+          <li>Kumbakonam &ndash; Sacred Temple Heritage</li>
+          <li>Rameswaram &ndash; Sri Ramanathaswamy Temple</li>
+          <li>Agni Theertham</li>
+          <li>Kanchipuram &ndash; Temple City</li>
+          <li>Sri Kamakshi Amman Temple</li>
+          <li>Tirumala &ndash; Sri Venkateswara Swamy Darshan</li>
+          <li>Guided pilgrimage and travel support</li>
+        </ul>
+      </div>
+      <div class="note-box">Note: Temple darshan, pooja/seva and special-entry arrangements are subject to the respective
+      temple authorities, availability, timings and regulations. The sequence of visits may vary depending on travel
+      schedules, temple timings, weather, local conditions and other unforeseen circumstances.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Journey Detail: Thiruvannamalai (Upcoming) ===== -->
+<section class="alt" id="journey-thiruvannamalai">
+  <div class="container">
+    <div class="journey-detail">
+      <span class="status-pill upcoming">Upcoming</span>
+      <h3>Thiruvannamalai &ndash; Kanchi &ndash; Tirupati Yatra</h3>
+      <p><strong>14 August 2026 &ndash; 18 August 2026</strong> &middot; 5 Days / 4 Nights &middot; &#8377;14,999 per person</p>
+      <p>Begin your pilgrimage from Hyderabad and journey through three sacred destinations of South India &mdash;
+      Thiruvannamalai, Kanchipuram and Tirupati. Experience the divine presence of Lord Arunachaleswara, seek the
+      blessings of Sri Kamakshi Amman and conclude your journey at the sacred hills of Lord Venkateswara.</p>
+
+      <div class="day-block"><h4>Day 1 &ndash; 14 August | Hyderabad &rarr; Thiruvannamalai</h4>
+        <ul><li>Departure from Hyderabad; travel towards Thiruvannamalai. Arrival and hotel check-in.</li><li>Evening visit to Sri Arunachaleswarar Temple; darshan of Lord Arunachaleswara and Unnamalai Amman. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 2 &ndash; 15 August | Thiruvannamalai &ndash; Arunachala Darshan</h4>
+        <ul><li>Early morning temple darshan; visit important sacred places around Arunachala.</li><li>Opportunity for Girivalam (circumambulation of Arunachala Hill), subject to schedule. Visit Ramana Maharshi Ashram, subject to time. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 3 &ndash; 16 August | Thiruvannamalai &rarr; Kanchipuram</h4>
+        <ul><li>Morning departure for Kanchipuram; visit Sri Kamakshi Amman Temple.</li><li>Darshan at important Shiva and Vishnu temples, subject to time. Continue onward towards Tirupati. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 4 &ndash; 17 August | Tirupati &ndash; Tirumala Darshan</h4>
+        <ul><li>Early morning journey to Tirumala; darshan of Sri Venkateswara Swamy.</li><li>Visit important temples and sacred places on Tirumala, subject to time and access. Return to Tirupati; overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 5 &ndash; 18 August | Tirupati &rarr; Hyderabad</h4>
+        <ul><li>Morning local visit / temple darshan at Tirupati, subject to time.</li><li>Begin return journey to Hyderabad. Yatra concludes with the blessings of Lord Venkateswara.</li></ul></div>
+
+      <div class="highlights">
+        <h4>Yatra Highlights</h4>
+        <ul>
+          <li>Sri Arunachaleswarar Temple, Thiruvannamalai</li>
+          <li>Sacred Arunachala Hill</li>
+          <li>Girivalam opportunity</li>
+          <li>Kanchipuram temple visit</li>
+          <li>Sri Kamakshi Amman Temple</li>
+          <li>Tirumala &ndash; Sri Venkateswara Swamy Darshan</li>
+          <li>Spiritual guidance and coordinated pilgrimage support</li>
+        </ul>
+      </div>
+      <div class="note-box">Note: Temple darshan, pooja/seva and special-entry arrangements are subject to
+      availability and the respective temple authorities' rules. The sequence of visits may be adjusted according
+      to travel conditions, temple timings, crowd conditions and local circumstances.</div>
+      <a href="#contact" class="btn">Book This Yatra</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Journey Detail: Kamakhya (Upcoming) ===== -->
+<section id="journey-kamakhya">
+  <div class="container">
+    <div class="journey-detail">
+      <span class="status-pill upcoming">Upcoming</span>
+      <h3>Puri &ndash; Tarapith &ndash; Kamakhya Yatra</h3>
+      <p><strong>22 August 2026 &ndash; 30 August 2026</strong> &middot; 9 Days / 8 Nights &middot; &#8377;29,999 per person</p>
+      <p>From the shores of Puri to the sacred Shakti Peetha of Kamakhya, this journey takes you through some of
+      Eastern India's most revered spiritual destinations &mdash; Visakhapatnam, Puri, Tarapith and Kamakhya.</p>
+
+      <div class="day-block"><h4>Day 1 &ndash; 22 August | Hyderabad &rarr; Visakhapatnam</h4>
+        <ul><li>Departure from Hyderabad; journey towards Visakhapatnam. Arrival and check-in.</li><li>Visit a selected temple / spiritual place in Visakhapatnam, subject to time. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 2 &ndash; 23 August | Visakhapatnam &rarr; Puri</h4>
+        <ul><li>Morning departure towards Puri, Odisha; arrival and hotel check-in.</li><li>Evening visit to Jagannath Temple surroundings, subject to temple timings. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 3 &ndash; 24 August | Puri &ndash; Jagannath Darshan</h4>
+        <ul><li>Early morning temple visit; Sri Jagannath Swamy Darshan, subject to temple rules.</li><li>Visit important sacred places in Puri. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 4 &ndash; 25 August | Puri &rarr; Tarapith</h4>
+        <ul><li>Morning departure from Puri towards Tarapith, West Bengal; arrival and check-in.</li><li>Evening visit to Maa Tara Temple, subject to temple timings. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 5 &ndash; 26 August | Tarapith &rarr; Kamakhya</h4>
+        <ul><li>Morning darshan at Maa Tara Temple, subject to schedule; begin journey towards Guwahati / Kamakhya.</li><li>Arrival at Kamakhya and hotel check-in. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 6 &ndash; 27 August | Kamakhya &ndash; Maa Kamakhya Darshan</h4>
+        <ul><li>Early morning visit to Maa Kamakhya Temple; darshan at the sacred Kamakhya Shakti Peetha.</li><li>Explore important temples within the Kamakhya complex, subject to time and access. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 7 &ndash; 28 August | Kamakhya &ndash; Nilachal Hill Spiritual Circuit</h4>
+        <ul><li>Continue the pilgrimage around the sacred Kamakhya complex; visit selected Mahavidya-related shrines.</li><li>Personal prayer, meditation and devotional activities. Overnight stay.</li></ul></div>
+      <div class="day-block"><h4>Day 8 &ndash; 29 August | Kamakhya &rarr; Howrah</h4>
+        <ul><li>Morning departure from Kamakhya; journey towards Howrah / Kolkata.</li><li>Arrival and local visit, subject to available time. Overnight / onward travel as per schedule.</li></ul></div>
+      <div class="day-block"><h4>Day 9 &ndash; 30 August | Howrah &rarr; Hyderabad</h4>
+        <ul><li>Final morning in Howrah / Kolkata, subject to travel schedule.</li><li>Begin return journey to Hyderabad. Yatra concludes with the blessings of Maa Kamakhya and the Divine Mother.</li></ul></div>
+
+      <div class="highlights">
+        <h4>Yatra Highlights</h4>
+        <ul>
+          <li>Visakhapatnam</li>
+          <li>Puri &ndash; Sri Jagannath Swamy Darshan</li>
+          <li>Tarapith &ndash; Maa Tara Darshan</li>
+          <li>Kamakhya &ndash; Sacred Shakti Peetha</li>
+          <li>Selected temples of the Kamakhya complex</li>
+          <li>Mahavidya-related sacred places, subject to access and time</li>
+          <li>Howrah / Kolkata</li>
+          <li>Guided pilgrimage support throughout the journey</li>
+        </ul>
+      </div>
+      <div class="note-box">Important Note: Darshan, temple entry, pooja/seva and special arrangements are subject
+      to the respective temple authorities, their availability, timings, regulations and booking policies. The
+      itinerary may be adjusted due to train/transport schedules, weather, local conditions, temple restrictions
+      or other unforeseen circumstances.</div>
+      <a href="#contact" class="btn">Book This Yatra</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About Us ===== -->
+<section class="alt" id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="tt.about.title">About Us &ndash; Trikaal Trails</h2>
+      <p style="font-weight:600;color:var(--saffron);" data-i18n="tt.about.subtitle">Walk the Sacred Path, Experience the Divine</p>
+      <div class="underline"></div>
+    </div>
+    <p>Trikaal Trails is more than travel &ndash; it is a thoughtfully curated pilgrimage experience designed to
+    help devotees connect with the spiritual essence of India's sacred temples. Every trail combines temple
+    history, traditions, legends, rituals and practical guidance, allowing pilgrims to undertake their yatra with
+    devotion, knowledge and confidence. Trikaal Trails provides safe, comfortable and dependable transportation for
+    pilgrims across India. Whether you are travelling individually, with family or in a group, we ensure a
+    hassle-free journey.</p>
+    <p>A pilgrimage is more than reaching a temple &ndash; it is a sacred journey of devotion, preparation and
+    transformation. Our intention is to simplify sacred journeys by providing authentic pilgrimage guidance,
+    darshan planning, ritual assistance and reliable travel support while preserving the sanctity of every temple
+    tradition. We believe devotees should spend their time in prayer and spiritual reflection, not worrying about
+    planning, bookings or logistics.</p>
+    <p>Trikaal Trails &ndash; Trikaal Spiritual &amp; Travel Services began with a simple vision to serve pilgrims and
+    long-distance travellers. Under the leadership of Mr. Durga Prasad, we
+    expanded our offerings to provide comprehensive spiritual and pilgrimage support across India.</p>
+
+    <div class="grid" style="margin-top:30px;">
+      <div class="card">
+        <h3 data-i18n="tt.philosophy.title">Our Philosophy</h3>
+        <p data-i18n="tt.philosophy.line1">Travel takes you to a destination.</p>
+        <p data-i18n="tt.philosophy.line2">A pilgrimage transforms the devotee.</p>
+        <p>Trikaal Trails exists not merely to help you reach a temple, but to help you experience its spiritual essence.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="tt.mission.title">Our Mission</h3>
+        <p>To provide dependable spiritual and travel services that make every pilgrimage simple, comfortable and
+        spiritually fulfilling through trusted guidance, professional coordination and dedicated customer support.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="tt.vision.title">Our Vision</h3>
+        <p>To become one of India's most trusted pilgrimage service providers by connecting devotees with sacred
+        temples through reliable darshan assistance, spiritual services and well-planned travel experiences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact / Need Assistance ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="tt.contact.title">Need Assistance?</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Our team is ready to assist you with:</h3>
+        <ul>
+          <li>Online Darshan Ticket Booking Assistance</li>
+          <li>Pooja &amp; Seva Booking Assistance</li>
+          <li>Pilgrimage Travel Planning</li>
+          <li>Group &amp; Family &amp; Customised Temple Tours</li>
+        </ul>
+      </div>
+      <div class="contact-card">
+        <h3 data-i18n="contact.trikaal">Trikaal Trails</h3>
+        <p>&#128222; <span data-i18n="contact.mobile">Mobile</span>: +91 8331 8551 61</p>
+        <p>&#128231; <span data-i18n="contact.email">Email</span>: trikaaltrails@gmail.com</p>
+        <p>&#128340; <span data-i18n="tt.contact.hours">Support Hours: Monday &ndash; Sunday, 9 AM to 8 PM</span></p>
+        <a href="mailto:trikaaltrails@gmail.com" class="btn" data-i18n="tt.contact.sendEnquiry">Send Enquiry</a>
+      </div>
+      <div class="contact-card">
+        <h3 data-i18n="contact.sushrusha">Sushrusha Margam</h3>
+        <p style="font-size:0.85rem;color:#777;">Parent seva organisation &ndash; different contact desk from Trikaal Trails.</p>
+        <p>&#128222; <span data-i18n="contact.mobile">Mobile</span>: +91 9494 54 6644</p>
+        <p>&#128231; <span data-i18n="contact.email">Email</span>: sushrushamargam@gmail.com</p>
+        <p>&#128340; <span data-i18n="contact.sushrushaHours">Monday &ndash; Sunday, 9:00 AM &ndash; 5:00 PM</span></p>
+        <a href="index.html#contact" class="btn outline">Visit Sushrusha Margam</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Disclaimer ===== -->
+<section class="alt">
+  <div class="container">
+    <h3 data-i18n="tt.disclaimer.title">Disclaimer</h3>
+    <p>Trikaal Trails provides pilgrimage planning, darshan assistance, temple guidance, pooja coordination, and
+    travel support to help devotees have a smooth and spiritually fulfilling journey. Darshan, pooja, and travel
+    assistance are arranged only through the respective temple authorities or their officially authorized booking
+    systems. Trikaal Trails does not issue or control these services, and they are subject to the respective
+    authorities' availability, policies, and terms.</p>
+    <p>Sightseeing and temple visits included in the itinerary are planned based on the available time, local
+    conditions, and weather. Due to unforeseen circumstances such as temple regulations, weather conditions,
+    traffic, or other unavoidable situations, certain places or activities may be modified, rescheduled, or
+    skipped. We kindly request all pilgrims to cooperate and respect such changes.</p>
+    <p class="note-box" data-i18n="tt.itinerary.note">Detailed day-wise itineraries are currently available in
+    English. Telugu &amp; Hindi translations of the full itinerary are coming soon.</p>
+    <blockquote style="font-style:italic;color:var(--maroon);border-left:4px solid var(--saffron);padding-left:16px;">
+      "A meaningful pilgrimage begins with devotion and succeeds through thoughtful planning."
+    </blockquote>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-i18n="nav.trikaal">Trikaal Trails</h4>
+        <p>&#128222; +91 8331 8551 61</p>
+        <p>&#128231; trikaaltrails@gmail.com</p>
+        <p>Support Hours: Mon &ndash; Sun, 24/7</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#packages">Spiritual Packages</a></li>
+          <li><a href="#journeys">Upcoming / Completed Journeys</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="destinations.title">Tour Destinations</h4>
+        <div class="destinations-list">
+          Amarnath, Ayodhya, Badrinath, Belur, Bhuvaneswar, Bodhgaya, Dharmasthala, Dwaraka, Guptkashi, Guruvayur,
+          Hampi, Haridwar, Kamakhya, Kanchipuram, Kedarnath, Kumbakonam, Konark, Madurai, Maheswar, Mathura,
+          Omkareswar, Prayagaraj, Puri, Pushkar, Rameswaram, Rishikesh, Sabarimala, Shirdi, Somnath, Srirangam,
+          Srisailam, Thanjavur, Thiruvananthapuram, Tirupati, Ujjain, Vaishno Devi, Varanasi, Vijayawada,
+          Visakhapatnam &mdash; Jyothirlinga, Spiritual Packages, Divine Heritage Trails, Religious Tours, Sacred
+          Journey Plans, Darshan Shrine Exploration, Ritual &amp; Puja Travel.
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-bottom" data-i18n="trusted.line">Your Trusted Partner for Sacred Journeys Across India</p>
+    <p class="footer-bottom" data-i18n="footer.copyright">Copyright &copy; 2026 Sushrusha Margam. An independent non-profit seva organisation, started in 2025.</p>
+    <p class="footer-credit">Website Designed by OSW Solutions &middot; <a href="https://oswsolutions.in" target="_blank" rel="noopener">OSWSOLUTIONS.IN</a></p>
+  </div>
+</footer>
+
+<a href="https://wa.me/918331855161" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with Trikaal Trails on WhatsApp">&#128241;</a>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

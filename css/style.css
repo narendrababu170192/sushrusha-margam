@@ -1,0 +1,786 @@
+/* ===== Shared styles for Sushrusha Margam / Trikaal Trails site ===== */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Telugu:wght@400;600;700&display=swap');
+
+:root {
+  --saffron: #ff7a00;
+  --maroon: #7a1f1f;
+  --gold: #d4a017;
+  --cream: #fff8ee;
+  --dark: #2b1a10;
+  --text: #3a2c22;
+  --green: #1c7c3f;
+  --radius: 10px;
+  --shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 { color: var(--maroon); margin-top: 0; }
+
+a { color: var(--saffron); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img.responsive { max-width: 100%; height: auto; display: block; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- Top language bar ---- */
+.lang-bar {
+  background: var(--dark);
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 6px 0;
+}
+.lang-bar .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.lang-bar button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.lang-bar button.active,
+.lang-bar button:hover {
+  background: var(--saffron);
+  border-color: var(--saffron);
+}
+
+/* ---- Header / Nav ---- */
+header.site-header {
+  background: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--maroon); font-size: 1.3rem; }
+.logo img { width: 64px; height: 64px; object-fit: contain; display: block; }
+.logo-copy { display: flex; flex-direction: column; line-height: 1.2; }
+.logo span.sub { display: block; font-size: 0.7rem; color: var(--saffron); font-weight: 400; }
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+nav.main-nav li { position: relative; }
+nav.main-nav a { color: var(--dark); font-weight: 600; font-size: 0.95rem; }
+nav.main-nav a:hover { color: var(--saffron); text-decoration: none; }
+
+nav.main-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  min-width: 200px;
+  padding: 8px 0;
+  list-style: none;
+  margin: 0;
+}
+nav.main-nav li:hover .dropdown-menu { display: block; }
+nav.main-nav .dropdown-menu li a { display: block; padding: 8px 16px; font-weight: 500; }
+
+.nav-toggle { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--maroon); }
+
+/* ---- Hero ---- */
+.hero {
+  background: linear-gradient(135deg, var(--maroon), var(--saffron));
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+.hero h1 { color: #fff; font-size: 2.4rem; margin-bottom: 8px; }
+.hero p.tagline { font-size: 1.15rem; opacity: 0.95; max-width: 800px; margin: 0 auto; }
+.hero .badge { display: inline-block; margin-top: 14px; background: rgba(255,255,255,0.15); padding: 8px 18px; border-radius: 30px; font-size: 0.9rem; }
+.hero .hero-btn { margin-left: 10px; background: #fff; color: var(--maroon); }
+.hero .hero-btn:hover { background: var(--gold); color: #fff; }
+
+/* ---- Tabs (Journey / Spiritual / Alone) ---- */
+.tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 30px 0 10px;
+}
+.tabs-nav button {
+  background: #fff;
+  border: 2px solid var(--saffron);
+  color: var(--saffron);
+  padding: 10px 26px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.tabs-nav button.active, .tabs-nav button:hover {
+  background: var(--saffron);
+  color: #fff;
+}
+.tab-panel { display: none; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 30px; max-width: 800px; margin: 0 auto 40px; text-align: center; }
+.tab-panel.active { display: block; }
+.tab-panel .callout { color: var(--maroon); font-weight: 800; letter-spacing: 1px; margin-top: 10px; font-size: 1.1rem; }
+
+/* ---- Sections ---- */
+section { padding: 50px 0; }
+section.alt { background: #fff2df; }
+.content-page .prose { max-width: 900px; }
+.content-page .prose h2 { margin-bottom: 14px; }
+.content-page .prose h3 { margin-top: 26px; }
+.content-page .prose ul { padding-left: 22px; }
+.content-page .prose li { margin-bottom: 8px; }
+.content-page .callout { color: var(--maroon); font-weight: 800; letter-spacing: 0.4px; }
+.section-title { text-align: center; margin-bottom: 34px; }
+.section-title h2 { font-size: 2rem; }
+.section-title .underline { width: 70px; height: 4px; background: var(--saffron); margin: 10px auto 0; border-radius: 4px; }
+
+/* ---- Cards grid ---- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px;
+  border-top: 4px solid var(--saffron);
+}
+.card ul { padding-left: 20px; margin: 12px 0; }
+.card ul li { margin-bottom: 6px; }
+.btn {
+  display: inline-block;
+  background: var(--saffron);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-top: 12px;
+}
+.btn:hover { background: var(--maroon); color: #fff; text-decoration: none; }
+.btn.outline { background: transparent; color: var(--saffron); border: 2px solid var(--saffron); }
+.btn.outline:hover { background: var(--saffron); color: #fff; }
+
+/* ---- Initiatives highlight ---- */
+.initiatives { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.initiative-card {
+  background: #fff;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.initiative-card .tag {
+  position: absolute; top: -14px; left: 20px;
+  background: var(--gold); color: #fff;
+  padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px;
+}
+
+/* ---- Package cards (Trikaal upcoming packages) ---- */
+.package-card { display: flex; flex-direction: column; height: 100%; }
+.package-card h3 { font-size: 1.15rem; }
+.package-card .status {
+  align-self: flex-start;
+  background: var(--green);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.package-card .status.completed { background: #6c757d; }
+.package-card .meta { font-size: 0.88rem; color: #555; margin: 4px 0; }
+.package-card .price { font-weight: 800; color: var(--maroon); font-size: 1.1rem; margin-top: auto; padding-top: 10px; }
+
+/* ---- Journeys table + horizontal scroll ---- */
+.scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+.scroll-x:active { cursor: grabbing; }
+.scroll-x::-webkit-scrollbar { height: 8px; }
+.scroll-x::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 4px; }
+
+table.journeys-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+table.journeys-table th, table.journeys-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+table.journeys-table th { background: var(--maroon); color: #fff; }
+table.journeys-table tr:hover td { background: #fff2df; }
+.status-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; color: #fff; }
+.status-pill.upcoming { background: var(--saffron); }
+.status-pill.completed { background: #6c757d; }
+
+.journey-filter { display: flex; justify-content: center; gap: 14px; margin-bottom: 24px; }
+.journey-filter button { background: #fff; border: 2px solid var(--maroon); color: var(--maroon); padding: 8px 20px; border-radius: 30px; font-weight: 700; cursor: pointer; }
+.journey-filter button.active { background: var(--maroon); color: #fff; }
+
+/* ---- Events left-right scroll ---- */
+.events-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+}
+.events-scroll .event-card {
+  scroll-snap-align: start;
+  min-width: 280px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  flex: 0 0 auto;
+}
+.events-scroll .event-card .status { display: inline-block; margin-bottom: 8px; }
+.scroll-hint { text-align: center; font-size: 0.85rem; color: #777; margin-top: 6px; }
+
+/* ---- Journey detail sections ---- */
+.journey-detail { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 40px; scroll-margin-top: 100px; }
+.journey-detail h3 { font-size: 1.5rem; }
+.journey-detail .day-block { margin-bottom: 18px; padding-left: 14px; border-left: 3px solid var(--saffron); }
+.journey-detail .day-block h4 { margin-bottom: 6px; color: var(--dark); }
+.journey-detail .highlights ul { columns: 2; }
+.note-box { background: #fff2df; border-left: 4px solid var(--gold); padding: 14px 18px; margin-top: 20px; font-size: 0.9rem; }
+
+/* ---- Contact ---- */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.contact-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 26px; }
+.contact-card h3 { border-bottom: 2px solid var(--saffron); padding-bottom: 10px; }
+.contact-card p { margin: 6px 0; }
+
+form.enquiry { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); }
+form.enquiry input, form.enquiry select, form.enquiry textarea {
+  width: 100%; padding: 10px; margin-bottom: 14px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit;
+}
+
+/* ---- Footer ---- */
+footer.site-footer { background: var(--dark); color: #f1e6da; padding: 40px 0 20px; }
+footer.site-footer h4 { color: var(--saffron); margin-bottom: 12px; }
+footer.site-footer a { color: #f1e6da; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 26px; margin-bottom: 24px; }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid ul li { margin-bottom: 6px; }
+.footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; font-size: 0.85rem; }
+.footer-credit { text-align: center; margin: 8px 0 0; font-size: 0.8rem; color: #f1e6da; }
+.footer-credit a { color: var(--saffron); font-weight: 700; }
+.destinations-list { font-size: 0.85rem; line-height: 1.8; opacity: 0.9; }
+
+/* ---- WhatsApp float ---- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25D366;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  z-index: 500;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.whatsapp-float:hover { transform: scale(1.08); text-decoration: none; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  nav.main-nav ul { position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; padding: 10px 20px; box-shadow: var(--shadow); display: none; }
+  nav.main-nav ul.open { display: flex; }
+  nav.main-nav li { width: 100%; }
+  nav.main-nav .dropdown-menu { position: static; box-shadow: none; padding-left: 12px; display: none; }
+  nav.main-nav li.open .dropdown-menu { display: block; }
+  .nav-toggle { display: block; }
+  .journey-detail .highlights ul { columns: 1; }
+}
+
+@media (max-width: 520px) {
+  .logo img { width: 48px; height: 48px; }
+  .logo { font-size: 1.05rem; }
+  .logo span.sub { font-size: 0.6rem; }
+  .hero .hero-btn { margin: 14px 0 0; }
+}
+
+/* =====================================================================
+   DEVOTIONAL LAYER
+   Temple-inspired typography, gold ornamentation and gentle motion.
+   Everything below is additive - it re-skins the base styles above.
+   ===================================================================== */
+
+:root {
+  --gold-light: #f3c96b;
+  --gold-deep: #b8860b;
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+html { scroll-behavior: smooth; }
+
+/* Fine gold lattice, like a temple floor pattern behind the cream. */
+body {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle, rgba(212,160,23,0.10) 0.5px, transparent 1.4px),
+    radial-gradient(circle at 85% -10%, rgba(255,122,0,0.07), transparent 55%);
+  background-size: 24px 24px, 100% 100%;
+}
+
+h1, h2, h3, h4 { font-family: 'Marcellus', 'Georgia', 'Segoe UI', serif; letter-spacing: 0.3px; }
+:lang(te) body, html[lang="te"] body { font-family: 'Noto Serif Telugu', 'Segoe UI', sans-serif; }
+
+/* ---- Header: gold thread + sticky shrink ---- */
+header.site-header {
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--saffron), var(--gold-light), var(--maroon), var(--gold-light), var(--saffron)) 1;
+  transition: box-shadow 0.35s var(--ease-soft), background 0.35s var(--ease-soft);
+}
+header.site-header.scrolled { background: rgba(255,255,255,0.94); backdrop-filter: blur(8px); box-shadow: 0 8px 24px rgba(122,31,31,0.16); }
+
+/* Nav links draw a saffron thread on hover. */
+nav.main-nav > ul > li > a { position: relative; padding-bottom: 4px; transition: color 0.25s; }
+nav.main-nav > ul > li > a::after {
+  content: '';
+  position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
+  background: linear-gradient(90deg, var(--saffron), var(--gold-light));
+  border-radius: 2px;
+  transition: width 0.3s var(--ease-soft);
+}
+nav.main-nav > ul > li > a:hover::after { width: 100%; }
+
+@media (min-width: 901px) {
+  nav.main-nav .dropdown-menu {
+    display: block;
+    opacity: 0; visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.25s var(--ease-soft), transform 0.25s var(--ease-soft), visibility 0.25s;
+    border-top: 3px solid var(--saffron);
+  }
+  nav.main-nav li:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+  nav.main-nav .dropdown-menu li a { transition: background 0.2s, padding-left 0.25s var(--ease-soft); }
+  nav.main-nav .dropdown-menu li a:hover { background: #fff2df; padding-left: 22px; text-decoration: none; }
+}
+
+/* ---- Hero: slow aarti-like glow, Om watermark, falling petals ---- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #5d1414 0%, var(--maroon) 32%, #c4551a 68%, var(--saffron) 100%);
+  background-size: 220% 220%;
+  animation: auraShift 20s ease-in-out infinite;
+}
+.hero::before {
+  content: '\0950';
+  position: absolute; right: 3%; top: 50%;
+  transform: translateY(-50%);
+  font-size: 20rem; line-height: 1;
+  font-family: 'Noto Serif Telugu', serif;
+  color: #fff; opacity: 0.08;
+  pointer-events: none;
+  animation: omBreath 7s ease-in-out infinite;
+}
+.hero::after {
+  content: '';
+  position: absolute; left: 50%; bottom: -55%;
+  width: 120%; height: 110%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(255,214,140,0.30), transparent 62%);
+  pointer-events: none;
+  animation: diyaGlow 5s ease-in-out infinite;
+}
+.hero .container { position: relative; z-index: 2; }
+.hero h1 { text-shadow: 0 2px 18px rgba(0,0,0,0.28); }
+.hero .badge {
+  border: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(4px);
+  animation: badgeGlow 4s ease-in-out infinite;
+}
+
+.petal {
+  position: absolute; top: -8%;
+  width: 10px; height: 14px;
+  background: linear-gradient(180deg, var(--gold-light), var(--saffron));
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: 1;
+  animation: petalFall linear infinite;
+}
+
+/* Badge + button sit on one row: align their middles, not their text baselines. */
+.hero .badge, .hero .hero-btn {
+  vertical-align: middle;
+  margin-top: 18px;
+  line-height: 1.4;
+}
+.hero .hero-btn { margin-left: 12px; }
+
+/* ---- Section titles: gold ornament with an Om medallion ---- */
+.section-title h2 { position: relative; display: inline-block; }
+.section-title .underline {
+  position: relative;
+  width: 150px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--saffron), var(--gold), transparent);
+  border-radius: 0;
+}
+.section-title .underline::after {
+  content: '\0950';
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  background: #fff;
+  color: var(--saffron);
+  font-size: 0.95rem;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(212,160,23,0.35);
+  animation: omSpinGlow 6s ease-in-out infinite;
+}
+
+/* ---- Cards: flowing gold crest, lift on hover ---- */
+.card, .initiative-card, .contact-card, .journey-detail, .events-scroll .event-card {
+  position: relative;
+  transition: transform 0.4s var(--ease-soft), box-shadow 0.4s var(--ease-soft);
+}
+.card { border-top-color: transparent; }
+.card::before {
+  content: '';
+  position: absolute; top: -4px; left: 0; right: 0; height: 4px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(90deg, var(--saffron), var(--gold-light), var(--maroon), var(--gold-light), var(--saffron));
+  background-size: 300% 100%;
+  animation: goldFlow 8s linear infinite;
+}
+.card:hover, .initiative-card:hover, .contact-card:hover, .events-scroll .event-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 38px rgba(122,31,31,0.18);
+}
+.initiative-card .tag { transition: transform 0.3s var(--ease-soft); }
+.initiative-card:hover .tag { transform: translateY(-3px) scale(1.05); }
+.contact-card h3 { border-bottom: none; position: relative; }
+.contact-card h3::after {
+  content: '';
+  position: absolute; left: 0; bottom: 0; height: 2px; width: 100%;
+  background: linear-gradient(90deg, var(--saffron), var(--gold-light), transparent);
+}
+
+/* ---- Buttons: lamp-light sweep ---- */
+.btn, .tabs-nav button, .journey-filter button, .lang-bar button {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s var(--ease-soft), background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.btn::after {
+  content: '';
+  position: absolute; top: 0; left: -130%;
+  width: 55%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+  transform: skewX(-22deg);
+}
+.btn:hover::after { animation: shineSweep 0.85s var(--ease-soft); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(255,122,0,0.32); }
+.btn.outline:hover { box-shadow: 0 10px 22px rgba(122,31,31,0.22); }
+.tabs-nav button:hover, .journey-filter button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(255,122,0,0.25); }
+.tabs-nav button.active { box-shadow: 0 8px 20px rgba(255,122,0,0.35); }
+
+/* ---- Tabs / panels ---- */
+.tab-panel { border-top: 4px solid transparent; }
+.tab-panel.active { animation: riseIn 0.5s var(--ease-soft); }
+.tab-panel .callout { color: var(--maroon); }
+
+/* ---- Journeys table ---- */
+table.journeys-table th { background: linear-gradient(135deg, #5d1414, var(--maroon)); letter-spacing: 0.4px; }
+table.journeys-table tbody tr { transition: background 0.3s, box-shadow 0.3s; }
+table.journeys-table tbody tr:hover { box-shadow: inset 4px 0 0 var(--saffron); }
+.status-pill.upcoming { animation: pillPulse 2.6s ease-in-out infinite; }
+.journey-detail .day-block { transition: border-color 0.3s, background 0.3s, padding-left 0.3s var(--ease-soft); border-radius: 0 6px 6px 0; }
+.journey-detail .day-block:hover { border-left-color: var(--gold); background: #fff8ee; padding-left: 20px; }
+.note-box { position: relative; }
+
+/* ---- Footer: gold thread on top, links slide ---- */
+footer.site-footer {
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--saffron), var(--gold-light), var(--maroon), var(--gold-light), var(--saffron)) 1;
+  background: linear-gradient(180deg, #33200f, var(--dark));
+}
+.footer-grid ul li a { display: inline-block; transition: transform 0.25s var(--ease-soft), color 0.25s; }
+.footer-grid ul li a:hover { transform: translateX(5px); color: var(--saffron); text-decoration: none; }
+
+/* ---- WhatsApp float: gentle prayer-bell pulse ---- */
+.whatsapp-float { transition: transform 0.3s var(--ease-soft), box-shadow 0.3s; }
+.whatsapp-float::before {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(37,211,102,0.55);
+  animation: bellRing 2.6s ease-out infinite;
+}
+
+/* ---- Back to top (created by main.js) ---- */
+.to-top {
+  position: fixed; bottom: 96px; right: 24px;
+  width: 46px; height: 46px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--saffron), var(--gold-deep));
+  color: #fff; font-size: 1.2rem;
+  border: none; border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.28);
+  cursor: pointer; z-index: 499;
+  opacity: 0; visibility: hidden; transform: translateY(14px);
+  transition: opacity 0.35s var(--ease-soft), transform 0.35s var(--ease-soft), visibility 0.35s;
+}
+.to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.to-top:hover { transform: translateY(-3px) scale(1.06); }
+
+/* ---- Scroll reveal (class applied by main.js, so no-JS pages stay visible) ---- */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.75s var(--ease-soft), transform 0.75s var(--ease-soft); }
+.reveal.in-view { opacity: 1; transform: none; }
+
+/* ---- Keyframes ---- */
+@keyframes auraShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes omBreath {
+  0%, 100% { opacity: 0.07; transform: translateY(-50%) scale(1); }
+  50% { opacity: 0.13; transform: translateY(-50%) scale(1.05); }
+}
+@keyframes diyaGlow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+@keyframes badgeGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(255,214,140,0); }
+  50% { box-shadow: 0 0 22px rgba(255,214,140,0.55); }
+}
+@keyframes omSpinGlow {
+  0%, 100% { box-shadow: 0 2px 10px rgba(212,160,23,0.35); transform: translate(-50%, -50%) scale(1); }
+  50% { box-shadow: 0 2px 20px rgba(255,122,0,0.6); transform: translate(-50%, -50%) scale(1.1); }
+}
+@keyframes goldFlow {
+  0% { background-position: 0% 0; }
+  100% { background-position: 300% 0; }
+}
+@keyframes shineSweep {
+  0% { left: -130%; }
+  100% { left: 130%; }
+}
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pillPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,122,0,0.5); }
+  50% { box-shadow: 0 0 0 7px rgba(255,122,0,0); }
+}
+@keyframes bellRing {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+  70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+@keyframes petalFall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.8; }
+  100% { transform: translateY(420px) rotate(360deg); opacity: 0; }
+}
+
+@media (max-width: 900px) {
+  .hero::before { font-size: 12rem; right: -4%; }
+  .to-top { bottom: 90px; right: 18px; }
+}
+
+/* =====================================================================
+   DEVOTIONAL ARTWORK
+   Hand-drawn inline SVG (embedded as data URIs, so nothing loads from
+   the network): temple gopurams, diyas, lotus and kalash motifs.
+   ===================================================================== */
+
+:root {
+  /* Gopuram skyline - three stepped temple towers on a low wall. */
+  --art-gopuram-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 90'%3E%3Cg fill='%23ffffff' fill-opacity='0.22'%3E%3Cpath d='M20 90 L24 74 L30 74 L34 62 L40 62 L44 52 L50 52 L54 44 L57 44 L60 34 L63 44 L66 44 L70 52 L76 52 L80 62 L86 62 L90 74 L96 74 L100 90 Z'/%3E%3Ccircle cx='60' cy='29' r='4'/%3E%3Cpath d='M130 90 L135 70 L142 70 L147 58 L154 58 L159 46 L166 46 L171 34 L176 34 L180 20 L184 34 L189 34 L194 46 L201 46 L206 58 L213 58 L218 70 L225 70 L230 90 Z'/%3E%3Ccircle cx='180' cy='14' r='5'/%3E%3Cpath d='M260 90 L264 74 L270 74 L274 62 L280 62 L284 52 L290 52 L294 44 L297 44 L300 34 L303 44 L306 44 L310 52 L316 52 L320 62 L326 62 L330 74 L336 74 L340 90 Z'/%3E%3Ccircle cx='300' cy='29' r='4'/%3E%3Crect x='0' y='84' width='360' height='6'/%3E%3C/g%3E%3C/svg%3E");
+  --art-gopuram-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 90'%3E%3Cg fill='%23d4a017' fill-opacity='0.55'%3E%3Cpath d='M20 90 L24 74 L30 74 L34 62 L40 62 L44 52 L50 52 L54 44 L57 44 L60 34 L63 44 L66 44 L70 52 L76 52 L80 62 L86 62 L90 74 L96 74 L100 90 Z'/%3E%3Ccircle cx='60' cy='29' r='4'/%3E%3Cpath d='M130 90 L135 70 L142 70 L147 58 L154 58 L159 46 L166 46 L171 34 L176 34 L180 20 L184 34 L189 34 L194 46 L201 46 L206 58 L213 58 L218 70 L225 70 L230 90 Z'/%3E%3Ccircle cx='180' cy='14' r='5'/%3E%3Cpath d='M260 90 L264 74 L270 74 L274 62 L280 62 L284 52 L290 52 L294 44 L297 44 L300 34 L303 44 L306 44 L310 52 L316 52 L320 62 L326 62 L330 74 L336 74 L340 90 Z'/%3E%3Ccircle cx='300' cy='29' r='4'/%3E%3Crect x='0' y='84' width='360' height='6'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* Lotus in bloom - five petals. */
+  --art-lotus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 34'%3E%3Cg fill='%23d4a017' fill-opacity='0.9'%3E%3Cellipse cx='32' cy='30' rx='4.5' ry='13'/%3E%3Cellipse cx='32' cy='30' rx='4.5' ry='12' transform='rotate(34 32 30)'/%3E%3Cellipse cx='32' cy='30' rx='4.5' ry='12' transform='rotate(-34 32 30)'/%3E%3Cellipse cx='32' cy='30' rx='4.5' ry='10' transform='rotate(66 32 30)'/%3E%3Cellipse cx='32' cy='30' rx='4.5' ry='10' transform='rotate(-66 32 30)'/%3E%3C/g%3E%3C/svg%3E");
+  --art-lotus-bullet: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='%23ff7a00'%3E%3Cellipse cx='10' cy='14' rx='2' ry='6'/%3E%3Cellipse cx='10' cy='14' rx='2' ry='5.5' transform='rotate(38 10 14)'/%3E%3Cellipse cx='10' cy='14' rx='2' ry='5.5' transform='rotate(-38 10 14)'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* Diya - lit oil lamp. */
+  --art-diya: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3 C20 9 21 13 16 18 C11 13 12 9 16 3' fill='%23ffb300'/%3E%3Cpath d='M16 8 C17.8 11 18.2 12.8 16 15.4 C13.8 12.8 14.2 11 16 8' fill='%23fff3c4'/%3E%3Cpath d='M3 20 Q16 32 29 20 Z' fill='%23a8541c'/%3E%3Cpath d='M3 20 Q16 24 29 20 Z' fill='%23d4a017'/%3E%3C/svg%3E");
+
+  /* Kalash - sacred pot with coconut and mango leaves. */
+  --art-kalash: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 52'%3E%3Cellipse cx='20' cy='12' rx='6' ry='7' fill='%237a1f1f'/%3E%3Cpath d='M14 17 Q8 12 4 18 Q10 22 14 19 Z' fill='%231c7c3f'/%3E%3Cpath d='M26 17 Q32 12 36 18 Q30 22 26 19 Z' fill='%231c7c3f'/%3E%3Cpath d='M12 22 h16 l-2 4 h-12 Z' fill='%23d4a017'/%3E%3Cpath d='M14 26 Q4 32 8 42 Q12 50 20 50 Q28 50 32 42 Q36 32 26 26 Z' fill='%23d4a017'/%3E%3Cpath d='M10 36 Q20 40 30 36' stroke='%23a8541c' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+}
+
+/* ---- Hero artwork (elements injected by main.js) ---- */
+.hero-glow {
+  position: absolute; left: 50%; bottom: -60%;
+  width: 130%; height: 120%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(255,214,140,0.32), transparent 62%);
+  pointer-events: none; z-index: 0;
+  animation: diyaGlow 5s ease-in-out infinite;
+}
+.hero-skyline {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 90px;
+  background-image: var(--art-gopuram-light);
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 360px 90px;
+  pointer-events: none; z-index: 1;
+}
+.hero-lamps {
+  position: absolute; left: 0; right: 0; bottom: 62px;
+  height: 34px;
+  display: flex; justify-content: center; gap: 46px;
+  pointer-events: none; z-index: 2;
+}
+.hero-lamps i {
+  width: 30px; height: 30px;
+  background: var(--art-diya) center/contain no-repeat;
+  filter: drop-shadow(0 0 10px rgba(255,190,80,0.85));
+  animation: flameFlicker 2.4s ease-in-out infinite;
+}
+.hero-lamps i:nth-child(2) { animation-delay: 0.5s; }
+.hero-lamps i:nth-child(3) { animation-delay: 1s; }
+.hero-lamps i:nth-child(4) { animation-delay: 1.5s; }
+.hero-lamps i:nth-child(5) { animation-delay: 2s; }
+.hero { padding-bottom: 110px; }
+.hero::after { content: none; }
+
+/* ---- Lotus above every section heading ---- */
+.section-title { position: relative; }
+.section-title::before {
+  content: '';
+  display: block;
+  width: 60px; height: 32px;
+  margin: 0 auto 10px;
+  background: var(--art-lotus) center/contain no-repeat;
+  animation: lotusSway 6s ease-in-out infinite;
+}
+
+/* ---- Card watermarks (kept inside the box so the gold crest is not clipped) ---- */
+.card::after, .initiative-card::after, .contact-card::after {
+  content: '';
+  position: absolute; right: 8px; bottom: 6px;
+  width: 84px; height: 84px;
+  opacity: 0.07;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-soft), transform 0.4s var(--ease-soft);
+}
+.card::after { background: var(--art-lotus) center/contain no-repeat; }
+.initiative-card::after { background: var(--art-diya) center/contain no-repeat; }
+.contact-card::after { background: var(--art-kalash) center/contain no-repeat; width: 64px; height: 84px; }
+.card:hover::after, .initiative-card:hover::after, .contact-card:hover::after {
+  opacity: 0.16;
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* ---- Lotus bullets in content lists ---- */
+.card ul li, .journey-detail .highlights ul li, .content-page .prose ul li, .contact-card ul li {
+  list-style-image: var(--art-lotus-bullet);
+}
+
+/* ---- Diya marker on each itinerary day ---- */
+.journey-detail .day-block h4 { position: relative; padding-left: 26px; }
+.journey-detail .day-block h4::before {
+  content: '';
+  position: absolute; left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 20px; height: 20px;
+  background: var(--art-diya) center/contain no-repeat;
+}
+
+/* ---- Footer crowned with a gold temple skyline ---- */
+footer.site-footer { position: relative; padding-top: 86px; }
+footer.site-footer::before {
+  content: '';
+  position: absolute; left: 0; right: 0; top: 0;
+  height: 64px;
+  background-image: var(--art-gopuram-gold);
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: 300px 64px;
+  transform: scaleY(-1);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ---- Note boxes get a small kalash ---- */
+.note-box { padding-left: 56px; }
+.note-box::before {
+  content: '';
+  position: absolute; left: 14px; top: 50%;
+  transform: translateY(-50%);
+  width: 26px; height: 34px;
+  background: var(--art-kalash) center/contain no-repeat;
+  opacity: 0.75;
+}
+
+@keyframes flameFlicker {
+  0%, 100% { transform: scale(1) translateY(0); filter: drop-shadow(0 0 8px rgba(255,190,80,0.8)); }
+  50% { transform: scale(1.09) translateY(-2px); filter: drop-shadow(0 0 16px rgba(255,205,110,1)); }
+}
+@keyframes lotusSway {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.07) rotate(3deg); }
+}
+
+@media (max-width: 700px) {
+  .hero-lamps { gap: 24px; }
+  .hero-lamps i:nth-child(n+4) { display: none; }
+}
+
+/* Respect users who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+  .petal { display: none; }
+}
