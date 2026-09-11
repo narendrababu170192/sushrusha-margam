@@ -13,7 +13,8 @@ const I18N = {
     "nav.join": "Join For Sushrusha",
     "nav.trikaal": "Trikaal Trails",
     "nav.trikaalDarshan": "Trikaal Darshan",
-    "nav.spiritualJourney": "Spiritual Journey",
+    "nav.spiritualJourney": "Spiritual Journeys",
+    "nav.whereWeTravel": "Where We Travel",
     "nav.blog": "Blog",
     "nav.contact": "Contact",
 
@@ -66,8 +67,8 @@ const I18N = {
     "tt.services.destinations.title": "Pilgrimage Destinations \u2013 Region Wise Tours",
     "tt.services.needAssistance": "Need Assistance",
 
-    "tt.packages.title": "Upcoming Spiritual Packages",
-    "tt.journeys.title": "Upcoming Journeys / Completed Journeys",
+    "tt.packages.title": "Spiritual Journeys",
+    "tt.journeys.title": "Upcoming & Completed Journeys",
     "tt.journeys.upcoming": "Upcoming Journeys",
     "tt.journeys.completed": "Completed Journeys",
     "tt.journeys.viewDetails": "View Journey Details",
@@ -113,7 +114,8 @@ const I18N = {
     "nav.join": "\u0c38\u0c47\u0c35\u0c32\u0c4b \u0c1a\u0c47\u0c30\u0c02\u0c21\u0c3f",
     "nav.trikaal": "\u0c24\u0c4d\u0c30\u0c3f\u0c15\u0c3e\u0c32\u0c4d \u0c1f\u0c4d\u0c30\u0c48\u0c32\u0c4d\u0c38\u0c4d",
     "nav.trikaalDarshan": "\u0c24\u0c4d\u0c30\u0c3f\u0c15\u0c3e\u0c32\u0c4d \u0c26\u0c30\u0c4d\u0c36\u0c28\u0c02",
-    "nav.spiritualJourney": "\u0c06\u0c27\u0c4d\u0c2f\u0c3e\u0c24\u0c4d\u0c2e\u0c3f\u0c15 \u0c2f\u0c3e\u0c24\u0c4d\u0c30",
+    "nav.spiritualJourney": "\u0c06\u0c27\u0c4d\u0c2f\u0c3e\u0c24\u0c4d\u0c2e\u0c3f\u0c15 \u0c2f\u0c3e\u0c24\u0c4d\u0c30\u0c32\u0c41",
+    "nav.whereWeTravel": "\u0c2e\u0c47\u0c2e\u0c41 \u0c2a\u0c4d\u0c30\u0c2f\u0c3e\u0c23\u0c3f\u0c02\u0c1a\u0c47 \u0c2a\u0c4d\u0c30\u0c26\u0c47\u0c36\u0c3e\u0c32\u0c41",
     "nav.blog": "\u0c2c\u0c4d\u0c32\u0c3e\u0c17\u0c4d",
     "nav.contact": "\u0c38\u0c02\u0c2a\u0c4d\u0c30\u0c26\u0c3f\u0c02\u0c1a\u0c02\u0c21\u0c3f",
 
@@ -213,7 +215,8 @@ const I18N = {
     "nav.join": "\u0938\u0947\u0935\u093e \u092e\u0947\u0902 \u0936\u093e\u092e\u093f\u0932 \u0939\u094b\u0902",
     "nav.trikaal": "\u0924\u094d\u0930\u093f\u0915\u093e\u0932 \u091f\u094d\u0930\u0947\u0932\u094d\u0938",
     "nav.trikaalDarshan": "\u0924\u094d\u0930\u093f\u0915\u093e\u0932 \u0926\u0930\u094d\u0936\u0928",
-    "nav.spiritualJourney": "\u0906\u0927\u094d\u092f\u093e\u0924\u094d\u092e\u093f\u0915 \u092f\u093e\u0924\u094d\u0930\u093e",
+    "nav.spiritualJourney": "\u0906\u0927\u094d\u092f\u093e\u0924\u094d\u092e\u093f\u0915 \u092f\u093e\u0924\u094d\u0930\u093e\u090f\u0901",
+    "nav.whereWeTravel": "\u0939\u092e \u0915\u0939\u093e\u0901 \u092f\u093e\u0924\u094d\u0930\u093e \u0915\u0930\u0924\u0947 \u0939\u0948\u0902",
     "nav.blog": "\u092c\u094d\u0932\u0949\u0917",
     "nav.contact": "\u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902",
 

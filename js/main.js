@@ -143,16 +143,28 @@ function initTabs() {
 
 function initJourneyFilter() {
   const filterButtons = document.querySelectorAll('.journey-filter button[data-filter]');
-  const rows = document.querySelectorAll('table.journeys-table tbody tr');
-  if (!filterButtons.length || !rows.length) return;
+  // Works for both the legacy journeys table and the Spiritual Journeys card grid.
+  const items = document.querySelectorAll(
+    'table.journeys-table tbody tr[data-status], .journeys-grid .journey-card[data-status]'
+  );
+  if (!filterButtons.length || !items.length) return;
+  const emptyMsg = document.querySelector('.journeys-empty');
+
+  const apply = (filter) => {
+    let shown = 0;
+    items.forEach(item => {
+      const match = (filter === 'all' || item.dataset.status === filter);
+      item.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+    if (emptyMsg) emptyMsg.classList.toggle('show', shown === 0);
+  };
+
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      rows.forEach(row => {
-        row.style.display = (filter === 'all' || row.dataset.status === filter) ? '' : 'none';
-      });
+      apply(btn.dataset.filter);
     });
   });
 }
